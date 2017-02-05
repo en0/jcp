@@ -1,13 +1,13 @@
-# JSON Path Commandline Tool
+# JSON Path Command line Tool
 
 Extract parts of a json file using JSONPath.
 
 ## Prerequisite
 
 This code was built with glib-2.0 and json-glib-1.0. You will need the
-development packages if you build from scrach.
+development packages if you build from scratch.
 
-If you are on ubuntu.
+If you are on Ubuntu.
 
 ```bash
 apt-get install libglib2.0-dev libjson-glib-dev libjson-glib-dev
