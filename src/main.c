@@ -15,7 +15,7 @@
 #include <glib-object.h>
 #include <json-glib/json-glib.h>
 
-#define LOAD_BUFFER_LIMIT 4096
+#define LOAD_BUFFER_LIMIT 1048576
 #define PROGRAM "jcp"
 
 void printNodeValue(JsonNode *node) {
@@ -55,6 +55,7 @@ char* getJsonData(const char* path, ssize_t *size) {
 
     if(rc == LOAD_BUFFER_LIMIT) {
         fprintf(stderr, "Buffer limit exceeded.");
+        fprintf(stderr, "Needed: %i", rc);
         free(buffer);
         exit(EXIT_FAILURE);
     } else if(rc==-1) {
